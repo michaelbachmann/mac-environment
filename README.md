@@ -2,6 +2,22 @@
 
 A colletion of must have applications and or packages for macOS. Also backups of my personal config files.
 
+## To do
+
+* Sublime settings
+* Vim settings `.vimrc`
+* Jetbrains settings
+* Xcode settings
+* Missing homebrew packages
+* Npm packages
+* Alfred packages
+* Chrome Apps/Plugins
+* macOS Settings
+* IC Keyboard Settings
+* Divvy Settings
+* Other settings?
+* Install script
+
 
 ## Development
 
