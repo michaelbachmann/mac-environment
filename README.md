@@ -1,8 +1,9 @@
-#Mac Environment Essentials
+# Mac Environment Essentials
+
 A colletion of must have applications and or packages for macOS. Also backups of my personal config files.
 
 
-##Development
+## Development
 
 * XCode Dev Tools - Can't do anything useful without them
 * [iTerm2](https://www.iterm2.com/) - Terminal Emulator
@@ -35,7 +36,8 @@ A colletion of must have applications and or packages for macOS. Also backups of
 	- [nvm](https://github.com/creationix/nvm) - node version manager, lets you use multiple versions of node side by side
 
 
-##Productivity
+## Productivity
+
 * [Chrome](https://www.google.com/chrome/browser/desktop/index.html) - The only web browser
 * [Karabiner Elements](https://github.com/tekezo/Karabiner-Elements) - Keyboard macros and config
 * [Alfred](https://www.alfredapp.com/) - If spotlight picked up crack
@@ -50,14 +52,16 @@ A colletion of must have applications and or packages for macOS. Also backups of
 * [Slack](https://slack.com/) - Great chat app
 * [Airmail](http://airmailapp.com/) - Superb email client
 
-##Media
+## Media
+
 * [VLC](https://www.videolan.org/vlc/index.html) - Plays almost every media type
 * [MPlayerX](http://mplayerx.org/) - For when VLC won't play your file
 * [OpenEmu](http://openemu.org/) - Video game emulation management
 * [PlexMediaServer](https://www.plex.tv/) - Great DLNA  server and will manage your media including downloading metadata
 * [Spotify](https://www.spotify.com/us/) - Music streaming <3
 
-##Other
+## Other
+
 * [Flux](https://justgetflux.com/) - MUST HAVE! Keeps your eyes from burning
 * [Little Snitch](https://www.obdev.at/products/littlesnitch/index.html) - Firewill
 * [Sophos](https://www.sophos.com/en-us.aspx) - Viruses are bad
