@@ -20,30 +20,56 @@ source /usr/local/bin/virtualenvwrapper.sh
 #export USER_NAME="YOUR NAME"
 #eval "$(rbenv init -)"
 
+#Styling output
+#Use them as:
+#echo "${txtbld}This is bold text output from shell script${txtrst}"
+#echo "${txtred}This is coloured red except ${txtblu}this is blue${txtrst}"
+#${txtrst} will reset the terminal.
+txtund=$(tput sgr 0 1)    # Underline
+txtbld=$(tput bold)       # Bold
+txtred=$(tput setaf 1)    # Red
+txtgrn=$(tput setaf 2)    # Green
+txtylw=$(tput setaf 3)    # Yellow
+txtblu=$(tput setaf 4)    # Blue
+txtpur=$(tput setaf 5)    # Purple
+txtcyn=$(tput setaf 6)    # Cyan
+txtwht=$(tput setaf 7)    # White
+txtrst=$(tput sgr0)       # Text reset
+
 # FileSearch
 function f() { find . -iname "*$1*" ${@:2} }
 function r() { grep "$1" ${@:2} -R . }
 
 #mkdir and cd
+#already defined by "take"
 function mkcd() { mkdir -p "$@" && cd "$_"; }
+
+#time zsh startup
+function timezsh() {
+  echo "${txtcyn}Timing zsh bootup${txtrst}"
+  time zsh -ilc exit
+}
 
 #Add to backup directory
 function bfile() {  cp "$1" "$HOME/Developer/config/Backup"; }
 
+#Download Mega Files
+function mdl() {
+  cd ~/Downloads
+  for file in "$@"
+  do
+    echo "Downloading ${txtcyn}$file${txtrst} in background..."
+    megadl $file &
+  done
+}
+
 # Life Alias'
 alias cppcompile='c++ -std=c++11 -stdlib=libc++'
-alias zshconfig="subl ~/.zshrc"
+alias zshconfig="nano ~/.zshrc"
+alias envconfig="nano ~/.oh-my-zsh/custom/env.sh"
 alias ohmyzsh="subl ~/.oh-my-zsh"
 alias srczsh="source ~/.zshrc"
 alias srcenv="source ~/Developer/config/env.sh"
 alias sbl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias envconfig="subl ~/Developer/config/env.sh"
 alias backcon="cd ~/Developer/config/Backup"
-# Fall 2015 Classes
-alias ee109="cd ~/Documents/School/USC/Fall\ 2015/EE109\ Embedded"
-alias cs170="cd ~/Documents/School/USC/Fall\ 2015/CS170\ Discrete"
-alias cs104="cd ~/Documents/School/USC/Fall\ 2015/CS104\ Data\ Structures"
-# Spring 2016 Classes
-alias cs201="cd ~/Documents/School/USC/Spring\ 2016/CSCI201\ Software\ Dev/"
-alias ee209="cd ~/Documents/School/USC/Spring\ 2016/EE209\ Digital\ Systems"
-alias cs360="cd ~/Documents/School/USC/Spring\ 2016/CSCI360\ Artificial\ Intelligence"
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
